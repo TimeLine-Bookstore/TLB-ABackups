@@ -1,0 +1,1718 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
+
+<head>
+    <title>【TLB技术招聘】网络爬虫与存档用脚本 - 时间轴书店</title>
+    
+    
+    
+    <script type="text/javascript" src="https://d3g0gp89917ko0.cloudfront.net/v--291054f06006/common--javascript/init.combined.js"></script>
+    <script  type="text/javascript">
+        var URL_HOST = 'www.wikidot.com';
+        var URL_DOMAIN = 'wikidot.com';
+        var USE_SSL =  true ;
+        var URL_STATIC = 'https://d3g0gp89917ko0.cloudfront.net/v--291054f06006';
+        // global request information
+        
+        var WIKIREQUEST = {};
+        WIKIREQUEST.info = {};
+        
+        WIKIREQUEST.info.domain = "timeline-bookstore.wikidot.com";
+        WIKIREQUEST.info.siteId = 4803609;
+        WIKIREQUEST.info.siteUnixName = "timeline-bookstore";
+        WIKIREQUEST.info.categoryId = 41680389;
+        WIKIREQUEST.info.themeId = 1;
+        WIKIREQUEST.info.requestPageName = "tr-crawler-and-archive-scripts";
+        OZONE.request.timestamp = 1670674718;
+        OZONE.request.date = new Date();
+        WIKIREQUEST.info.lang = 'cn';
+                WIKIREQUEST.info.pageUnixName = "tr-crawler-and-archive-scripts";
+        WIKIREQUEST.info.pageId = 1437054287;
+                        WIKIREQUEST.info.lang = "cn";
+        OZONE.lang = "cn";
+        var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    </script>
+    
+    
+
+
+    
+        <script  type="text/javascript">
+    
+        require.config({
+            baseUrl: URL_STATIC + '/common--javascript',
+            paths: {
+                'jquery.ui': 'jquery-ui.min',
+                'jquery.form': 'jquery.form'
+            }
+        });
+    
+    </script>
+    
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+                            <meta name="keywords" content="TimeLine-Bookstore,TLB"/>
+                                <meta name="og:locale" content="zh-cn"/>
+                                <meta name="og:site_name" content="时间轴书店"/>
+                                <meta name="theme-color" content="#03033d"/>
+                                <meta name="og:type" content="article"/>
+                                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                            
+    
+    
+    
+    
+    <meta http-equiv="content-language" content="cn"/>
+    <script type="text/javascript" src="https://d3g0gp89917ko0.cloudfront.net/v--291054f06006/common--javascript/WIKIDOT.combined.js"></script>
+        
+    
+    <style type="text/css" id="internal-style">
+        
+        /* modules */
+@import url(https://d3g0gp89917ko0.cloudfront.net/v--291054f06006/common--modules/css/wiki/pagestagcloud/PagesTagCloudModule.css);
+
+
+        
+                
+        /* theme */
+                    @import url(https://d3g0gp89917ko0.cloudfront.net/v--291054f06006/common--theme/base/css/style.css);
+                    @import url(https://timeline-bookstore.wikidot.com/component:theme/code/1);
+            </style>
+    
+        
+        
+        
+    <link rel="shortcut icon" href="/local--favicon/favicon.gif"/>
+    <link rel="icon" type="image/gif" href="/local--favicon/favicon.gif"/>
+    
+            <link rel="apple-touch-icon" href="/local--iosicon/iosicon_57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/local--iosicon/iosicon_72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/local--iosicon/iosicon.png" />    
+        
+            <meta name="msapplication-TileImage" content="/local--wp8icon/wp8icon.png"/>
+                
+            <link rel="alternate" type="application/wiki" title="Edit this page" href="javascript:WIKIDOT.page.listeners.editClick()"/>
+    
+        <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-18234656-1']);
+        _gaq.push(['_setDomainName', 'none']);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
+
+        _gaq.push(['old._setAccount', 'UA-68540-5']);
+        _gaq.push(['old._setDomainName', 'none']);
+        _gaq.push(['old._setAllowLinker', true]);
+        _gaq.push(['old._trackPageview']);
+
+            </script>
+    
+    <script type="text/javascript">
+        window.google_analytics_uacct = 'UA-18234656-1';
+        window.google_analytics_domain_name = 'none';
+    </script>
+    
+        <link rel="manifest" href="/onesignal/manifest.json" />
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" acync=""></script>
+    <script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+          OneSignal.init({
+            appId: null,
+          });
+        });
+    </script>
+        
+<style>
+owindow.owait>.content.modal-body {
+font-size: 0px;
+}
+.owindow.owait:before {
+font-size: 15px;
+content:"加载中……";
+text-align: center;
+display:block;
+margin:10px 5px 0;
+}
+.owindow.owait .content {
+margin: 50px;
+padding: 0 50px 100px 50px;
+background-repeat: no-repeat;
+background-position: bottom center;
+background-image: url(https://timeline-bookstore.wikidot.com/local--files/nav:side/loading);
+}
+</style>
+<style>
+.textchange div.sitemember:nth-child(2) {
+display:none;
+}
+</style>
+<link rel="alternate" type="application/rss+xml" title="Comments for the page &quot;【TLB技术招聘】网络爬虫与存档用脚本&quot;" href="/feed/page/comments-1437054287.xml"/><script type="text/javascript" src="https://d3g0gp89917ko0.cloudfront.net/v--291054f06006/common--modules/js/forum/ForumCommentsModule.js"></script>
+<script type="text/javascript" src="https://d3g0gp89917ko0.cloudfront.net/v--291054f06006/common--modules/js/forum/ForumViewThreadModule.js"></script>
+<script type="text/javascript" src="https://d3g0gp89917ko0.cloudfront.net/v--291054f06006/common--modules/js/forum/ForumViewThreadPostsModule.js"></script>
+<script type="text/javascript" src="https://d3g0gp89917ko0.cloudfront.net/v--291054f06006/common--modules/js/forum/sub/ForumNewPostFormModule.js"></script>
+</head>
+<body id="html-body">
+<div id="skrollr-body">
+<a name="page-top"></a>
+
+
+
+
+
+<div id="container-wrap-wrap">
+    <div id="container-wrap">
+        <div id="container">
+            <div id="header">
+              <h1><a href="/"><span>时间轴书店</span></a></h1>
+                
+                    <h2><span>是写文和社交的好地方！</span></h2>
+                
+                
+                <!-- google_ad_section_start(weight=ignore) -->
+                
+                <div id="search-top-box" class="form-search">
+    <form id="search-top-box-form" action="dummy" class="input-append">
+        <input id="search-top-box-input" class="text empty search-query" type="text" size="15" name="query" value="搜索网站" onfocus="if(YAHOO.util.Dom.hasClass(this, 'empty')){YAHOO.util.Dom.removeClass(this,'empty'); this.value='';}"/><input class="button btn" type="submit" name="search" value="搜索"/>
+    </form>
+</div>
+                
+                
+                    <div id="top-bar">
+                        
+
+<div class="top-bar" role="navigation">
+<ul>
+<li>导航
+<ul>
+<li><a href="/most-recently-created-originate">最近新增的原创页面</a></li>
+<li><a href="/most-recently-created-handling">最近新增的搬运页面</a></li>
+<li><a href="/collab:canon-hub">世界设定中心</a></li>
+<li><a href="/collab:compilation-center">文章合集中心</a></li>
+<li><a href="/collab:members-pages">作者中心页</a></li>
+<li><a href="/character-centre">人设中心页</a></li>
+<li><a href="/contest-centre">竞赛中心页</a></li>
+<li><a href="/short-articles">超短篇中心</a></li>
+<li><a href="/selection-center">精选中心</a></li>
+<li><a href="/tgc:main">一间不起眼的小房间</a></li>
+</ul>
+</li>
+<li>写作
+<ul>
+<li><a href="/how-to-write">如何在这里写一篇文章</a></li>
+<li><a href="/collab:canon-hub">世界设定中心</a></li>
+<li><a href="/character-centre">人设中心页</a></li>
+<li><a href="/collab:members-pages">作者中心页</a></li>
+<li><a href="http://tlb-sandbox.wikidot.com" target="_blank">沙盒站</a></li>
+<li><a href="http://tlb-files.wikidot.com" target="_blank">附件站</a></li>
+<li><a href="/wiki-syntax">维基语法</a></li>
+<li><a href="/tag-guide">标签指导</a></li>
+<li><a href="/collab:folk-tag">民间标签列表</a></li>
+<li><a href="/movement-guide">搬运指南</a></li>
+</ul>
+</li>
+<li>讨论
+<ul>
+<li><a href="/forum:start">讨论区</a></li>
+<li><a href="/collab:members-pages">作者页</a></li>
+<li><a href="/public:message-wall">留言墙</a></li>
+<li><a href="/cbox">聊天室</a></li>
+</ul>
+</li>
+<li>指导
+<ul>
+<li><a href="/guide-hub">指导中心</a></li>
+<li><a href="/site-rules">必读！网站站规</a></li>
+<li><a href="/guide-for-newbies">新手指南</a></li>
+<li><a href="/how-to-write">怎样在本站写一篇文章</a></li>
+<li><a href="/movement-guide">搬运指南</a></li>
+<li><a href="/anti-plagiarism-policy">反抄袭政策</a></li>
+<li><a href="/deletions-guide">删文指导</a></li>
+<li><a href="/wiki-syntax">维基语法</a></li>
+<li><a href="/syntax-quick-reference">实用工具传送门</a></li>
+<li><a href="/links">链接</a></li>
+</ul>
+</li>
+<li><a href="/_admin">控制台</a></li>
+</ul>
+</div>
+<div class="mobile-top-bar" role="navigation">
+<div class="open-menu">
+<p><a href="#side-bar">≡</a></p>
+</div>
+<ul>
+<li>导航
+<ul>
+<li><a href="/most-recently-created-originate">最近新增的原创页面</a></li>
+<li><a href="/most-recently-created-handling">最近新增的搬运页面</a></li>
+<li><a href="/collab:canon-hub">世界设定中心</a></li>
+<li><a href="/collab:compilation-center">文章合集中心</a></li>
+<li><a href="/collab:members-pages">作者中心页</a></li>
+<li><a href="/character-centre">人设中心页</a></li>
+<li><a href="/contest-centre">竞赛中心页</a></li>
+<li><a href="/short-articles">超短篇中心</a></li>
+<li><a href="/selection-center">精选中心</a></li>
+<li><a href="/tgc:main">一间不起眼的小房间</a></li>
+</ul>
+</li>
+<li>写作
+<ul>
+<li><a href="/how-to-write">如何在这里写一篇文章</a></li>
+<li><a href="/collab:canon-hub">世界设定中心</a></li>
+<li><a href="/character-centre">人设中心页</a></li>
+<li><a href="/collab:members-pages">作者中心页</a></li>
+<li><a href="http://tlb-sandbox.wikidot.com" target="_blank">沙盒站</a></li>
+<li><a href="http://tlb-files.wikidot.com" target="_blank">附件站</a></li>
+<li><a href="/wiki-syntax">维基语法</a></li>
+<li><a href="/tag-guide">标签指导</a></li>
+<li><a href="/collab:folk-tag">民间标签列表</a></li>
+<li><a href="/movement-guide">搬运指南</a></li>
+</ul>
+</li>
+<li>讨论
+<ul>
+<li><a href="/forum:start">讨论区</a></li>
+<li><a href="/collab:members-pages">作者页</a></li>
+<li><a href="/public:message-wall">留言墙</a></li>
+<li><a href="/cbox">聊天室</a></li>
+</ul>
+</li>
+<li>指导
+<ul>
+<li><a href="/guide-hub">指导中心</a></li>
+<li><a href="/site-rules">必读！网站站规</a></li>
+<li><a href="/guide-for-newbies">新手指南</a></li>
+<li><a href="/how-to-write">怎样在本站写一篇文章</a></li>
+<li><a href="/movement-guide">搬运指南</a></li>
+<li><a href="/anti-plagiarism-policy">反抄袭政策</a></li>
+<li><a href="/deletions-guide">删文指导</a></li>
+<li><a href="/wiki-syntax">维基语法</a></li>
+<li><a href="/syntax-quick-reference">实用工具传送门</a></li>
+<li><a href="/links">链接</a></li>
+</ul>
+</li>
+<li><a href="/_admin">控制台</a></li>
+</ul>
+</div>
+
+                    </div>
+                
+                <div id="login-status"><a href="javascript:;" onclick="WIKIDOT.page.listeners.createAccount(event)" class="login-status-create-account btn">建立帐号</a> <span>或</span> <a href="javascript:;" onclick="WIKIDOT.page.listeners.loginClick(event)" class="login-status-sign-in btn btn-primary">登入</a> </div>
+                <div id="header-extra-div-1"><span></span></div><div id="header-extra-div-2"><span></span></div><div id="header-extra-div-3"><span></span></div>
+            </div>
+            
+            <div id="content-wrap">
+                
+                    <div id="side-bar">
+                        
+
+
+                        
+
+
+
+
+
+
+
+<div class="side-block">
+<p><iframe src="/nav:side/html/45c2d2ab37c6e302fc9f71a74add85d703b969c4-19050771741605067501" allowtransparency="true" frameborder="0" class="html-block-iframe"></iframe><br /></p>
+<div style="text-align: center;">
+<div class="textchange">
+
+<div class="sitemember">
+<p>欢迎，<strong>匿名读者！</strong></p>
+<p><strong>您的用户名：</strong><em>未登录</em><br />
+<strong>账号ID：</strong><em>未登录</em><br />
+<strong>账号主页：</strong><em>未登录</em></p>
+<div style="text-align: center;">
+<p>如果您也想创作文章,<br />
+您可以<strong><a href="https://www.wikidot.com/default--flow/login__LoginPopupScreen?originSiteId=4803609&amp;openerUri=https://timeline-bookstore.wikidot.com" target="_blank">登录您的Wikidot账号</a></strong><br />
+然后<strong><a href="/system:join">加入网站</a></strong>，进行创作.</p>
+<p><strong>没有Wikidot账号？</strong><br />
+<strong><a href="https://www.wikidot.com/default--flow/login__CreateAccountScreen?originSiteId=4803609" target="_blank">创建一个Wikidot账号！</a></strong></p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<hr />
+<div class="side-block">
+<div class="heading">
+<p>新人资讯</p>
+</div>
+<div class="menu-item">
+<p><strong><span style="font-size:1.3em;"><a href="/system:join">◆加入书店</a></span></strong></p>
+</div>
+<div class="menu-item">
+<p><a href="/guide-for-newbies">◆新手指南</a></p>
+</div>
+<div class="menu-item">
+<p><a href="/site-rules">◆网站站规</a></p>
+</div>
+<div class="menu-item">
+<p><a href="/how-to-write">◇如何在这里正确地写一篇文章</a></p>
+</div>
+<div class="menu-item">
+<p><a href="/public:message-wall">◇留言墙</a></p>
+</div>
+</div>
+<hr />
+<div class="side-block">
+<div class="heading">
+<p>网站</p>
+</div>
+<div class="menu-item">
+<p><a href="/main">◆主页</a></p>
+</div>
+<div class="menu-item">
+<p><a href="/most-recently-created">◇最近新增的页面</a></p>
+</div>
+<div class="menu-item">
+<p><a href="/system:recent-changes">◇最近的修改</a></p>
+</div>
+<div class="menu-item">
+<p><a href="/top-rated-pages">◇最高评分的页面</a></p>
+</div>
+<div class="menu-item">
+<p><a href="/lowest-rated-pages">◇最低评分的页面</a></p>
+</div>
+<div class="menu-item">
+<p><a href="https://search.ahnu.cf/">◇谷歌搜索引擎镜像</a></p>
+</div>
+</div>
+<hr />
+<div class="side-block">
+<div class="heading">
+<p>系列网站</p>
+</div>
+<div class="menu-item">
+<p><a href="http://tlb-sandbox.wikidot.com" target="_blank">◆沙盒站</a></p>
+</div>
+<div class="menu-item">
+<p><a href="http://tlb-files.wikidot.com" target="_blank">◆文件存储库</a></p>
+</div>
+</div>
+<hr />
+<div class="side-block">
+<div class="heading">
+<p>随机</p>
+</div>
+<div class="menu-item">
+<p><a href="http://www.wikidot.com/random-site.php" target="_blank">◆随机wikidot网站</a></p>
+</div>
+<div class="menu-item">
+<p><a href="/random:random">◆全站随机</a></p>
+</div>
+<div class="menu-item">
+<p><a href="/random:pages">◇随机原创</a></p>
+</div>
+<div class="menu-item">
+<p><a href="/random:random-movepage">◇随机搬运页面</a></p>
+</div>
+<div class="menu-item">
+<p><a href="/random:random-personnel">◇随机人设页</a></p>
+</div>
+</div>
+<hr />
+<div class="side-block">
+<div class="heading">
+<p>社交</p>
+</div>
+<div class="menu-item">
+<p><a href="/forum:start">◆讨论区</a></p>
+</div>
+<div class="menu-item">
+<p><a href="/forum:recent-threads">◇最近讨论串</a></p>
+</div>
+<div class="menu-item">
+<p><a href="/forum:recent-posts">◇最近讨论帖</a></p>
+</div>
+<div class="menu-item">
+<p><a href="/collab:members-pages">◆作者中心页</a></p>
+</div>
+<div class="menu-item">
+<p><a href="/character-centre">◆人设中心页</a></p>
+</div>
+<div class="menu-item">
+<p><a href="/contest-centre">◆竞赛中心页</a></p>
+</div>
+<div class="menu-item">
+<p><a href="/collab:compilation-center">◆合集中心页</a></p>
+</div>
+</div>
+<hr />
+<div class="heading">
+<p>杂项</p>
+</div>
+<div class="side-block resources">
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">▷实用工具</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">▼实用工具</a></div>
+<div class="collapsible-block-content">
+<div class="menu-item">
+<p><strong>wikidot内</strong></p>
+</div>
+<div class="menu-item">
+<p><a href="http://scp-wiki-cn.wikidot.com/system:page-tags/tag/%E7%89%88%E5%BC%8F#pages" target="_blank">◇中分的版式</a></p>
+</div>
+<div class="menu-item">
+<p><a href="http://scp-wiki-cn.wikidot.com/system:page-tags/tag/%E6%A0%B7%E7%89%88#pages" target="_blank">◇中分的样板</a></p>
+</div>
+<div class="menu-item">
+<p><a href="http://scp-wiki-cn.wikidot.com/system:page-tags/tag/%E7%BB%84%E4%BB%B6#pages" target="_blank">◇中分的组件</a></p>
+</div>
+<div class="menu-item">
+<p><a href="http://scp-wiki-cn.wikidot.com/credit:start" target="_blank">◇著作信息模块</a></p>
+</div>
+<div class="menu-item">
+<p><a href="http://scp-wiki-cn.wikidot.com/ratemod:sentimentbar" target="_blank">◇评分占比条</a></p>
+</div>
+<div class="menu-item">
+<p><a href="http://scp-wiki-cn.wikidot.com/css-theme-preparation-tool" target="_blank">◇CSS制作工具</a></p>
+</div>
+<div class="menu-item">
+<p><strong>wikidot外</strong></p>
+</div>
+<div class="menu-item">
+<p><a href="https://www.thinkcmf.com/font/font_awesome/icons.html" target="_blank">◇奥森图标大全</a></p>
+</div>
+<div class="menu-item">
+<p><a href="https://www.aies.cn/" target="_blank">◇简繁体转换器</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br />
+<div class="side-block resources">
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">▷指导栏目</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">▼指导栏目</a></div>
+<div class="collapsible-block-content">
+<div class="menu-item">
+<p><a href="/guide-hub">◆指导中心</a></p>
+</div>
+<div class="menu-item">
+<p><a href="/tag-guide">◆标签指导</a></p>
+</div>
+<div class="menu-item">
+<p><a href="/collab:folk-tag">◇民间标签列表</a></p>
+</div>
+<div class="menu-item">
+<p><a href="/movement-guide">◆搬运指南</a></p>
+</div>
+<div class="menu-item">
+<p><a href="/wiki-syntax">◆维基语法</a></p>
+</div>
+<div class="menu-item">
+<p><a href="/syntax-quick-reference">◇实用工具传送门</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br />
+<div class="side-block">
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">▷管理专用</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">▼管理专用</a></div>
+<div class="collapsible-block-content">
+<div class="menu-item">
+<p><a href="/_admin">◆管理后台</a></p>
+</div>
+<div class="menu-item">
+<p><a href="http://tlb-command.wikidot.com/">◆职员专站</a></p>
+</div>
+<div class="menu-item">
+<p><a href="/system:list-all-categories">◇所有页面</a></p>
+</div>
+<div class="menu-item">
+<p><a href="/system:members">◇成员列表</a></p>
+</div>
+<div class="menu-item">
+<p><a href="/nav:side">◇侧栏</a> <a href="/nav:top">◇顶栏</a> <a href="/component:theme">◇版式</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br />
+<div class="side-block resources">
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">▷标签云</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">▼标签云</a></div>
+<div class="collapsible-block-content">	<div class="pages-tag-cloud-box">
+									<a class="tag" href="/system:page-tags/tag/bitverse"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>bitverse</a>
+							<a class="tag" href="/system:page-tags/tag/cete"
+					style="font-size: 90%; color: rgb(125, 125, 189);"
+					>cete</a>
+							<a class="tag" href="/system:page-tags/tag/cta%E5%90%9B"
+					style="font-size: 86%; color: rgb(127, 127, 191);"
+					>cta君</a>
+							<a class="tag" href="/system:page-tags/tag/evidenz"
+					style="font-size: 86%; color: rgb(127, 127, 191);"
+					>evidenz</a>
+							<a class="tag" href="/system:page-tags/tag/olympia"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>olympia</a>
+							<a class="tag" href="/system:page-tags/tag/r-15"
+					style="font-size: 87%; color: rgb(127, 127, 191);"
+					>r-15</a>
+							<a class="tag" href="/system:page-tags/tag/r-18"
+					style="font-size: 88%; color: rgb(126, 126, 190);"
+					>r-18</a>
+							<a class="tag" href="/system:page-tags/tag/rickroll"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>rickroll</a>
+							<a class="tag" href="/system:page-tags/tag/soprano"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>soprano</a>
+							<a class="tag" href="/system:page-tags/tag/strega"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>strega</a>
+							<a class="tag" href="/system:page-tags/tag/tg"
+					style="font-size: 86%; color: rgb(127, 127, 191);"
+					>tg</a>
+							<a class="tag" href="/system:page-tags/tag/tortoise-god"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>tortoise-god</a>
+							<a class="tag" href="/system:page-tags/tag/%E4%B8%96%E7%95%8C%E8%AE%BE%E5%AE%9A"
+					style="font-size: 87%; color: rgb(127, 127, 191);"
+					>世界设定</a>
+							<a class="tag" href="/system:page-tags/tag/%E4%B8%AD%E5%BF%83"
+					style="font-size: 106%; color: rgb(116, 116, 180);"
+					>中心</a>
+							<a class="tag" href="/system:page-tags/tag/%E4%BA%BA%E7%89%A9%E8%AE%BE%E5%AE%9A"
+					style="font-size: 97%; color: rgb(122, 122, 186);"
+					>人物设定</a>
+							<a class="tag" href="/system:page-tags/tag/%E4%BD%9C%E8%80%85%E9%A1%B5"
+					style="font-size: 96%; color: rgb(122, 122, 186);"
+					>作者页</a>
+							<a class="tag" href="/system:page-tags/tag/%E5%85%B6%E4%BB%96%E7%B1%BB%E6%96%87%E7%AB%A0"
+					style="font-size: 90%; color: rgb(125, 125, 189);"
+					>其他类文章</a>
+							<a class="tag" href="/system:page-tags/tag/%E5%85%B6%E5%AE%83%E7%B1%BB%E6%96%87%E7%AB%A0"
+					style="font-size: 86%; color: rgb(127, 127, 191);"
+					>其它类文章</a>
+							<a class="tag" href="/system:page-tags/tag/%E5%86%85%E5%AE%B9%E8%AD%A6%E5%91%8A"
+					style="font-size: 86%; color: rgb(127, 127, 191);"
+					>内容警告</a>
+							<a class="tag" href="/system:page-tags/tag/%E5%88%86%E7%B1%BB"
+					style="font-size: 86%; color: rgb(127, 127, 191);"
+					>分类</a>
+							<a class="tag" href="/system:page-tags/tag/%E5%88%86%E7%B1%BB%E5%BE%85%E5%AE%9A"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>分类待定</a>
+							<a class="tag" href="/system:page-tags/tag/%E5%8E%9F%E5%88%9B"
+					style="font-size: 200%; color: rgb(64, 64, 128);"
+					>原创</a>
+							<a class="tag" href="/system:page-tags/tag/%E5%8F%B6%E6%96%87"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>叶文</a>
+							<a class="tag" href="/system:page-tags/tag/%E5%90%88%E4%BD%9C"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>合作</a>
+							<a class="tag" href="/system:page-tags/tag/%E5%90%88%E4%BD%9C%E9%A1%B5%E9%9D%A2"
+					style="font-size: 87%; color: rgb(127, 127, 191);"
+					>合作页面</a>
+							<a class="tag" href="/system:page-tags/tag/%E5%90%88%E9%9B%86"
+					style="font-size: 87%; color: rgb(127, 127, 191);"
+					>合集</a>
+							<a class="tag" href="/system:page-tags/tag/%E5%9C%A3%E6%A1%91%E8%B0%AD%E5%A8%9C%E5%B8%82"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>圣桑谭娜市</a>
+							<a class="tag" href="/system:page-tags/tag/%E5%A4%A9%E9%A1%B6%E9%98%81"
+					style="font-size: 87%; color: rgb(127, 127, 191);"
+					>天顶阁</a>
+							<a class="tag" href="/system:page-tags/tag/%E5%A5%87%E5%B9%BB"
+					style="font-size: 88%; color: rgb(126, 126, 190);"
+					>奇幻</a>
+							<a class="tag" href="/system:page-tags/tag/%E5%AD%90%E9%A1%B5%E9%9D%A2"
+					style="font-size: 88%; color: rgb(126, 126, 190);"
+					>子页面</a>
+							<a class="tag" href="/system:page-tags/tag/%E5%AF%BC%E8%88%AA"
+					style="font-size: 93%; color: rgb(123, 123, 187);"
+					>导航</a>
+							<a class="tag" href="/system:page-tags/tag/%E5%B7%A5%E6%88%BF"
+					style="font-size: 87%; color: rgb(127, 127, 191);"
+					>工房</a>
+							<a class="tag" href="/system:page-tags/tag/%E5%BF%85%E8%AF%BB"
+					style="font-size: 89%; color: rgb(126, 126, 190);"
+					>必读</a>
+							<a class="tag" href="/system:page-tags/tag/%E6%81%90%E6%80%96"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>恐怖</a>
+							<a class="tag" href="/system:page-tags/tag/%E6%8A%80%E6%9C%AF"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>技术</a>
+							<a class="tag" href="/system:page-tags/tag/%E6%8C%87%E5%AF%BC"
+					style="font-size: 102%; color: rgb(119, 119, 183);"
+					>指导</a>
+							<a class="tag" href="/system:page-tags/tag/%E6%90%AC%E8%BF%90"
+					style="font-size: 88%; color: rgb(126, 126, 190);"
+					>搬运</a>
+							<a class="tag" href="/system:page-tags/tag/%E6%95%85%E4%BA%8B"
+					style="font-size: 86%; color: rgb(127, 127, 191);"
+					>故事</a>
+							<a class="tag" href="/system:page-tags/tag/%E6%95%A3%E6%96%87"
+					style="font-size: 88%; color: rgb(126, 126, 190);"
+					>散文</a>
+							<a class="tag" href="/system:page-tags/tag/%E6%96%87%E7%AB%A0"
+					style="font-size: 124%; color: rgb(106, 106, 170);"
+					>文章</a>
+							<a class="tag" href="/system:page-tags/tag/%E6%96%B0%E9%97%BB"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>新闻</a>
+							<a class="tag" href="/system:page-tags/tag/%E6%96%BD%E5%B7%A5"
+					style="font-size: 86%; color: rgb(127, 127, 191);"
+					>施工</a>
+							<a class="tag" href="/system:page-tags/tag/%E6%A8%A1%E6%9D%BF"
+					style="font-size: 90%; color: rgb(125, 125, 189);"
+					>模板</a>
+							<a class="tag" href="/system:page-tags/tag/%E6%A8%A1%E7%89%88"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>模版</a>
+							<a class="tag" href="/system:page-tags/tag/%E6%AC%A2%E8%BF%8E"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>欢迎</a>
+							<a class="tag" href="/system:page-tags/tag/%E7%89%88%E5%BC%8F"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>版式</a>
+							<a class="tag" href="/system:page-tags/tag/%E7%8B%90%E5%B0%8F%E4%BB%99"
+					style="font-size: 92%; color: rgb(124, 124, 188);"
+					>狐小仙</a>
+							<a class="tag" href="/system:page-tags/tag/%E7%8E%84%E5%B9%BB"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>玄幻</a>
+							<a class="tag" href="/system:page-tags/tag/%E7%90%A6%E7%8E%89"
+					style="font-size: 86%; color: rgb(127, 127, 191);"
+					>琦玉</a>
+							<a class="tag" href="/system:page-tags/tag/%E7%91%B6%E6%A3%BB"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>瑶棻</a>
+							<a class="tag" href="/system:page-tags/tag/%E7%9B%B8%E9%81%87"
+					style="font-size: 91%; color: rgb(124, 124, 188);"
+					>相遇</a>
+							<a class="tag" href="/system:page-tags/tag/%E7%9F%AD%E7%AF%87"
+					style="font-size: 93%; color: rgb(123, 123, 187);"
+					>短篇</a>
+							<a class="tag" href="/system:page-tags/tag/%E7%A5%9E%E9%BE%9F%E4%B9%8B%E5%9F%8E"
+					style="font-size: 107%; color: rgb(116, 116, 180);"
+					>神龟之城</a>
+							<a class="tag" href="/system:page-tags/tag/%E7%A5%9E%E9%BE%9F%E4%B9%8B%E5%9F%8E%E4%B8%BB%E5%9F%8E%E5%BB%BA%E8%AE%BE"
+					style="font-size: 86%; color: rgb(127, 127, 191);"
+					>神龟之城主城建设</a>
+							<a class="tag" href="/system:page-tags/tag/%E7%A5%9E%E9%BE%9F%E4%B9%8B%E5%9F%8E%E9%87%8D%E5%86%99%E8%AE%A1%E5%88%92"
+					style="font-size: 96%; color: rgb(122, 122, 186);"
+					>神龟之城重写计划</a>
+							<a class="tag" href="/system:page-tags/tag/%E7%A7%91%E5%B9%BB"
+					style="font-size: 89%; color: rgb(126, 126, 190);"
+					>科幻</a>
+							<a class="tag" href="/system:page-tags/tag/%E7%AB%99%E4%B8%BB"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>站主</a>
+							<a class="tag" href="/system:page-tags/tag/%E7%AB%99%E9%95%BF"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>站长</a>
+							<a class="tag" href="/system:page-tags/tag/%E7%AB%9E%E8%B5%9B"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>竞赛</a>
+							<a class="tag" href="/system:page-tags/tag/%E7%AC%AC%E4%B8%80%E4%BA%BA%E7%A7%B0"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>第一人称</a>
+							<a class="tag" href="/system:page-tags/tag/%E7%AC%AC%E4%B8%89%E4%BA%BA%E7%A7%B0"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>第三人称</a>
+							<a class="tag" href="/system:page-tags/tag/%E7%AE%A1%E7%90%86"
+					style="font-size: 126%; color: rgb(105, 105, 169);"
+					>管理</a>
+							<a class="tag" href="/system:page-tags/tag/%E7%BA%A2%E6%98%9F%E7%85%A7%E8%80%80%E8%A5%BF%E8%8E%B1%E5%B0%94"
+					style="font-size: 89%; color: rgb(126, 126, 190);"
+					>红星照耀西莱尔</a>
+							<a class="tag" href="/system:page-tags/tag/%E7%BB%84%E4%BB%B6"
+					style="font-size: 94%; color: rgb(123, 123, 187);"
+					>组件</a>
+							<a class="tag" href="/system:page-tags/tag/%E7%BB%84%E4%BB%B6%E5%90%8E%E7%AB%AF"
+					style="font-size: 89%; color: rgb(126, 126, 190);"
+					>组件后端</a>
+							<a class="tag" href="/system:page-tags/tag/%E7%BB%84%E4%BB%B6%E7%A4%BA%E4%BE%8B"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>组件示例</a>
+							<a class="tag" href="/system:page-tags/tag/%E8%AE%AE%E8%AE%BA"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>议论</a>
+							<a class="tag" href="/system:page-tags/tag/%E8%AE%AE%E8%AE%BA%E6%96%87"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>议论文</a>
+							<a class="tag" href="/system:page-tags/tag/%E8%AE%B0%E5%8F%99%E6%96%87"
+					style="font-size: 93%; color: rgb(123, 123, 187);"
+					>记叙文</a>
+							<a class="tag" href="/system:page-tags/tag/%E8%AF%8D"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>词</a>
+							<a class="tag" href="/system:page-tags/tag/%E8%AF%97%E6%AD%8C"
+					style="font-size: 93%; color: rgb(123, 123, 187);"
+					>诗歌</a>
+							<a class="tag" href="/system:page-tags/tag/%E8%AF%B4%E6%98%8E%E6%96%87"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>说明文</a>
+							<a class="tag" href="/system:page-tags/tag/%E9%80%9A%E7%9F%A5"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>通知</a>
+							<a class="tag" href="/system:page-tags/tag/%E9%87%8D%E5%86%99%E4%B8%AD"
+					style="font-size: 88%; color: rgb(126, 126, 190);"
+					>重写中</a>
+							<a class="tag" href="/system:page-tags/tag/%E9%87%8D%E8%A6%81"
+					style="font-size: 85%; color: rgb(128, 128, 192);"
+					>重要</a>
+							<a class="tag" href="/system:page-tags/tag/%E9%BE%9F%E7%A5%9E"
+					style="font-size: 94%; color: rgb(123, 123, 187);"
+					>龟神</a>
+							<a class="tag" href="/system:page-tags/tag/%E9%BE%9F%E7%A5%9E%E4%BF%B1%E4%B9%90%E9%83%A8"
+					style="font-size: 124%; color: rgb(106, 106, 170);"
+					>龟神俱乐部</a>
+							<a class="tag" href="/system:page-tags/tag/%E9%BE%9F%E7%A5%9E%E5%A8%98"
+					style="font-size: 86%; color: rgb(127, 127, 191);"
+					>龟神娘</a>
+						</div>
+	
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="side-block">
+<div class="heading">
+<p>社交媒体</p>
+</div>
+<div class="menu-item">
+<p><a href="https://space.bilibili.com/699986625/" target="_blank">◇Bilibili：龟大神有些小烦恼</a><br />
+<a href="https://github.com/TimeLine-Bookstore" target="_blank">◇Github：TimeLine-Bookstore</a><br />
+<a href="http://netboard.wikidot.com/author:6600193" target="_blank">◇Netboard 官号作者页</a></p>
+</div>
+</div>
+<hr />
+<div class="side-block">
+<div style="text-align: center;">
+<p><img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png" alt="CC BY-SA 4.0" width="100" height="35" /></p>
+<p><span style="font-size:80%;">时间轴书店<br />
+<em>适用<a href="http://timeline-bookstore.wikidot.com/sthofcc">CC BY-SA 4.0协议</a></em></span></p>
+</div>
+</div>
+<div style="clear:both; height: 0px; font-size: 1px"></div>
+<a class="close-menu" href="###"><br />
+<img src="http://timeline-bookstore.wikidot.com/local--files/nav:side/black.png" style="z-index=-1; opacity: 0.3;" alt="black.png" class="image" /><br /></a>
+                        
+
+
+                    </div>
+                
+                
+                <!-- google_ad_section_end -->
+                
+                <div id="main-content">
+                    <div id="action-area-top"></div>
+                    
+                    
+                        <div id="page-title">
+                            【TLB技术招聘】网络爬虫与存档用脚本
+                        </div>
+                    
+
+                    
+
+                    
+
+
+
+                    <div id="page-content">
+                        
+
+
+
+<blockquote>
+<p>此内容首发于<a href="http://netboard.wikidot.com/blog:1164">http://netboard.wikidot.com/blog:1164</a>，若后有更新均补充在此页面。</p>
+</blockquote>
+<h2 id="toc0"><span><strong>目前我们有两个项目同时进行：</strong></span></h2>
+<p><strong>项目名称：</strong>维基HTML代码存档（只读用）<br />
+<strong>项目代号：</strong>py-crawler<br />
+<strong>项目时长：</strong>估计1个月（若因为学生党时间问题，则可能无限延期）<br />
+<strong>项目状态：</strong>正式版已完成；代码开源工程；授权任何Wiki使用（ld作为项目发起者，深刻了解各个维基对备份工作的需要性和依赖性，因此，在与更多代码作者完成后，我们希望这些作者能够慷慨的让任何维基简洁方便的使用）<span style="color: red">这一点我发誓！只要做出来了，任何维基都可以使用，只需要简洁修改一些参数）</span>。<br />
+<strong>项目许可证：</strong>初定为MIT，在正式开始之前，可能会有修改。<br />
+<strong>项目简介：</strong>创建一个爬虫工程，用于爬取wiki上存在的所有页面，用于在受灾后的网站静态只读版本。可能不适用于恢复工程，但是为恢复页面提供了依据。<br />
+<strong>项目要求：</strong>爬虫能完好运行，对爬取速度有所限制（初定为任何一个基于wikidot网站页面的二倍），对爬取时间有所限制（初定为在技术工作人员电脑或其他端上，1小时内爬取至少65页，差不多就是每分钟必须爬一个页面，不能中断），如遇到突发错误尽可能能够从突发错误的爬取阶段上重新开始爬取，尽可能避免使用非Python爬虫软件（小型的组件可以使用，但是必须放在爬虫文件包内），等等。<br />
+<strong>招募要求：</strong>愿意且自愿做出贡献（没有任何人会逼你做出，做这些东西纯属为了大家为了社区），你不可以因为制作了这些而想获得任何报酬（这是无偿的，但是却对任何人的维基都很有用），你有必须在完成后的项目文件上署名的义务（不管我们最终采用的许可证如何要求，你都必须在完成后的项目文件上署名），保证完成后后续的维护（坚决抵制在这里摆烂行为），等等。<br />
+<strong>能力要求：</strong>如果你认为你有足够的能力参加这个项目，那么欢迎你，我们把要求说一下。首先，完成这个项目需要的是爬虫技能，其次是Python的技能，如果你还有其他编程语言的技能，那么在需要其他编程语言的协助时，那么你肯定能优先完成这些。<br />
+<strong>资历提醒：</strong>如果你有，那更好，如果没有可以忽略。首先，是爬虫的使用经历（有是最好的），然后是相关编程语言的使用经历，如果你在学我们项目所使用的编程语言，那么也欢迎你来到团队参与。<br />
+<strong>补充：</strong>以上内容肯定不会完全是最终的结果，等待团队正式启动项目后，我们会慢慢讨论并且研究出最终结果。<br />
+<strong>谨记：</strong>你为的是所有社区，而不是你自己，如果你不愿意为所有社区做出贡献，那么这个团队不欢迎你，我们为的是所有社区共同完善下去！仅此而已！</p>
+<p><span style="white-space: pre-wrap;">&#32;</span><br />
+<span style="white-space: pre-wrap;">&#32;</span></p>
+<p><strong>项目名称：</strong>存档用脚本（存档用）<br />
+<strong>项目代号：</strong>Scripts For Archiving（简称：SFA）<br />
+<strong>项目时长：</strong>估计2个月（若因为学生党时间问题，则可能无限延期）<br />
+<strong>项目状态：</strong>启动中；代码开源工程；授权任何Wiki使用（ld作为项目发起者，深刻了解各个维基对备份工作的需要性和依赖性，因此，在与更多代码作者完成后，我们希望这些作者能够慷慨的让任何维基简洁方便的使用）<span style="color: red">这一点我发誓！只要做出来了，任何维基都可以使用，只需要简洁修改一些参数）</span>。<br />
+<strong>项目许可证：</strong>初定为MIT，在正式开始之前，可能会有修改。<br />
+<strong>项目简介：</strong>创建一个自动化复制页面信息的脚本工程，用于复制wiki上存在的所有页面的信息，用于恢复页面版本。<br />
+<strong>项目要求：</strong>*脚本能完好运行并且自动化，对爬取速度有所限制（初定为任何一个基于wikidot网站页面的二倍），对使用时间有所限制（初定为在技术工作人员电脑或其他端上，1小时内爬取至少70页，差不多就是每分钟必须爬一个页面，不能中断），如遇到突发错误尽可能能够从突发错误的阶段上重新开始进行，尽可能避免使用脚本编程软件（小型的组件可以使用，但是必须放在脚本文件包内），等等。<br />
+<strong>招募要求：</strong>愿意且自愿做出贡献（没有任何人会逼你做出，做这些东西纯属为了大家为了社区），你不可以因为制作了这些而想获得任何报酬（这是无偿的，但是却对任何人的维基都很有用），你有必须在完成后的项目文件上署名的义务（不管我们最终采用的许可证如何要求，你都必须在完成后的项目文件上署名），保证完成后后续的维护（坚决抵制在这里摆烂行为），等等。<br />
+<strong>能力要求：</strong>如果你认为你有足够的能力参加这个项目，那么欢迎你，我们把要求说一下。首先，完成这个项目需要的是爬虫技能，其次是的Script技能和脚本软件使用努力，如果你还有其他编程语言的技能，那么在需要其他编程语言的协助时，那么你肯定能优先完成这些。<br />
+<strong>资历提醒：</strong>如果你有，那更好，如果没有可以忽略。首先，是爬虫的使用经历（有是最好的），然后是相关编程语言的使用经历，如果你在学我们项目所使用的编程语言，那么也欢迎你来到团队参与。<br />
+<strong>补充：</strong>以上内容肯定不会完全是最终的结果，等待团队正式启动项目后，我们会慢慢讨论并且研究出最终结果。<br />
+<strong>谨记：</strong>你为的是所有社区，而不是你自己，如果你不愿意为所有社区做出贡献，那么这个团队不欢迎你，我们为的是所有社区共同完善下去！仅此而已！</p>
+<p>如果你有意愿做出贡献，请按照下面格式介绍自己：</p>
+<div class="code">
+<pre><code>用户名：&lt;您的Wikidot用户名&gt;
+参与开发项目：&lt;你想开发哪一个项目，回答格式：维基HTML代码存档（只读用）/存档用脚本（存档用）/均有意愿参与&gt;
+编程语言水平：&lt;说一下你擅长哪些主流的编程语言、脚本语言、爬虫语言&gt;
+经验记录：&lt;你写过的任何项目，大项目、小项目都可以&gt;</code></pre></div>
+<p><strong>欢迎参与TLB技术团队PYC及SFA项目群（QQ群）：</strong> 316769845<br />
+<strong>维基HTML代码存档（只读用）项目Github存储库：</strong> <a href="https://github.com/TimeLine-Bookstore/Py-crawler">https://github.com/TimeLine-Bookstore/Py-crawler</a><br />
+<strong>存档用脚本（存档用）项目Github存储库：</strong> <a href="https://github.com/TimeLine-Bookstore/Scripts-For-Archiving">https://github.com/TimeLine-Bookstore/Scripts-For-Archiving</a></p>
+<hr />
+<h1 id="toc1"><span>讨论区</span></h1>
+<div class="comments-box">
+		
+	<div class="options" id="comments-options-hidden" style="display: none">
+		<a href="javascript:;" onclick="WIKIDOT.modules.ForumCommentsModule.listeners.showComments(event)">显示评论</a> 
+	</div>
+		
+	<div id="thread-container" class="thread-container" style="margin-top: 1em">
+					
+
+
+<script type="text/javascript">
+	WIKIDOT.forumThreadId = 15367127;
+</script>
+
+
+	<div class="options" id="comments-options-shown">
+		<a href="javascript:;" onclick="WIKIDOT.modules.ForumCommentsModule.listeners.hideComments(event)" class="btn btn-default btn-small btn-sm">隐藏所有评论</a> 
+		<a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.unfoldAll(event)" class="btn btn-default btn-small btn-sm">全部展开</a> 
+		<a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.foldAll(event)" class="btn btn-default btn-small btn-sm">全部折叠</a>
+	</div>
+
+<div id="thread-container-posts" style="display: none">
+    
+
+
+
+	
+					
+      
+    <div class="post-container" id="fpc-5700193">
+                      
+		<div class="post" id="post-5700193">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,5700193)" class="btn btn-default btn-small btn-sm">折叠</a>
+					</div>
+								<div class="title" id="post-title-5700193">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/lest-day" onclick="WIKIDOT.page.listeners.userInfo(7850356); return false;"  ><img class="small" src="https://www.wikidot.com/avatar.php?userid=7850356&amp;amp;size=small&amp;amp;timestamp=1670674718" alt="lest-day" style="background-image:url(https://www.wikidot.com/userkarma.php?u=7850356)"/></a><a href="http://www.wikidot.com/user:info/lest-day" onclick="WIKIDOT.page.listeners.userInfo(7850356); return false;" >lest-day</a></span> <span class="odate time_1667700779 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Nov 2022 02:12</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-5700193">
+									
+
+<p>首先，是我自己。</p>
+<hr />
+<p>用户名：lest-day<br />
+参与开发项目：均有意愿参与<br />
+编程语言水平：在项目继续的基础上，会一点Python，学习脚本中。<br />
+经验记录：目前没有。</p>
+<hr />
+<p>不得不承认我自己技术能力不是很好的，我竭尽所能。</p>
+
+							</div>
+
+										<div class="signature">
+					<hr class="signature-separator"/>
+					
+
+<p><em>更新了的论坛签名档（</em><br />
+hi，欢迎前往我的<strong><a href="https://lest-day.github.io/" target="_blank">技术站</a></strong>和<strong><a href="http://ld-private-website.wikidot.com/" target="_blank">私人实验室</a></strong>。有兴趣的话，要不来<strong><a href="http://timeline-bookstore.wikidot.com/" target="_blank">时间轴书店</a></strong>看看！</p>
+
+				</div>
+					
+							<div class="changes">
+					最后编辑于 <span class="odate time_1667700794 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Nov 2022 02:13</span>
+					由 <span class="printuser"><a href="http://www.wikidot.com/user:info/lest-day" onclick="WIKIDOT.page.listeners.userInfo(7850356); return false;" >lest-day</a></span>
+					<a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.showHistory(event,5700193)"><i class="icon-plus"></i> 显示更多</a>
+				</div>
+				<div class="revisions" style="display: none"></div>
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,5700193)" class="btn btn-primary btn-small btn-sm">回复</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,5700193)" class="btn btn-default btn-small btn-sm">选项</a>
+							</div>
+									
+			<div id="post-options-5700193" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,5700193)" c>展开</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,5700193)"></a> 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/lest-day" onclick="WIKIDOT.page.listeners.userInfo(7850356); return false;"  ><img class="small" src="https://www.wikidot.com/avatar.php?userid=7850356&amp;amp;size=small&amp;amp;timestamp=1670674718" alt="lest-day" style="background-image:url(https://www.wikidot.com/userkarma.php?u=7850356)"/></a><a href="http://www.wikidot.com/user:info/lest-day" onclick="WIKIDOT.page.listeners.userInfo(7850356); return false;" >lest-day</a></span>, <span class="odate time_1667700779 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Nov 2022 02:12</span>
+		</div>
+	</div>
+ 
+                
+                	
+
+
+        
+            </div>
+ 
+
+	
+					
+      
+    <div class="post-container" id="fpc-5700276">
+                      
+		<div class="post" id="post-5700276">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,5700276)" class="btn btn-default btn-small btn-sm">折叠</a>
+					</div>
+								<div class="title" id="post-title-5700276">
+																		我也试试
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/minecraft-windows11" onclick="WIKIDOT.page.listeners.userInfo(8314830); return false;"  ><img class="small" src="https://www.wikidot.com/avatar.php?userid=8314830&amp;amp;size=small&amp;amp;timestamp=1670674718" alt="Minecraft_windows11" style="background-image:url(https://www.wikidot.com/userkarma.php?u=8314830)"/></a><a href="http://www.wikidot.com/user:info/minecraft-windows11" onclick="WIKIDOT.page.listeners.userInfo(8314830); return false;" >Minecraft_windows11</a></span> <span class="odate time_1667705475 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Nov 2022 03:31</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-5700276">
+									
+
+<p>用户名：Minecraft_windows11<br />
+参与开发项目：均有意愿参与<br />
+编程语言水平：Python基础扎实，有面向对象的经验<br />
+经验记录：爬yu22c的网站（DOGE）</p>
+
+							</div>
+
+										<div class="signature">
+					<hr class="signature-separator"/>
+					
+
+<div style="text-align: center;">
+<p>人与人之间，除了生离与死别，并无第三种结局。</p>
+</div>
+
+				</div>
+					
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,5700276)" class="btn btn-primary btn-small btn-sm">回复</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,5700276)" class="btn btn-default btn-small btn-sm">选项</a>
+							</div>
+									
+			<div id="post-options-5700276" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,5700276)" c>展开</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,5700276)">我也试试</a> 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/minecraft-windows11" onclick="WIKIDOT.page.listeners.userInfo(8314830); return false;"  ><img class="small" src="https://www.wikidot.com/avatar.php?userid=8314830&amp;amp;size=small&amp;amp;timestamp=1670674718" alt="Minecraft_windows11" style="background-image:url(https://www.wikidot.com/userkarma.php?u=8314830)"/></a><a href="http://www.wikidot.com/user:info/minecraft-windows11" onclick="WIKIDOT.page.listeners.userInfo(8314830); return false;" >Minecraft_windows11</a></span>, <span class="odate time_1667705475 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Nov 2022 03:31</span>
+		</div>
+	</div>
+ 
+                
+        
+                      
+    <div class="post-container" id="fpc-5700295">
+                      
+		<div class="post" id="post-5700295">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,5700295)" class="btn btn-default btn-small btn-sm">折叠</a>
+					</div>
+								<div class="title" id="post-title-5700295">
+																		Re: 我也试试
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/lest-day" onclick="WIKIDOT.page.listeners.userInfo(7850356); return false;"  ><img class="small" src="https://www.wikidot.com/avatar.php?userid=7850356&amp;amp;size=small&amp;amp;timestamp=1670674718" alt="lest-day" style="background-image:url(https://www.wikidot.com/userkarma.php?u=7850356)"/></a><a href="http://www.wikidot.com/user:info/lest-day" onclick="WIKIDOT.page.listeners.userInfo(7850356); return false;" >lest-day</a></span> <span class="odate time_1667706279 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Nov 2022 03:44</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-5700295">
+									
+
+<p>欢迎参与！我们的项目文件已在最后列出，可以通过拉取分支来编辑。</p>
+<hr />
+<p>如果没有Github嘛……来这里协助（<a href="http://ld-private-website.wikidot.com/forum/c-7602920/">http://ld-private-website.wikidot.com/forum/c-7602920/</a>）<br />
+当然，发代码和功能就可以，需要什么东西或者有什么问题上面发。</p>
+
+							</div>
+
+										<div class="signature">
+					<hr class="signature-separator"/>
+					
+
+<p><em>更新了的论坛签名档（</em><br />
+hi，欢迎前往我的<strong><a href="https://lest-day.github.io/" target="_blank">技术站</a></strong>和<strong><a href="http://ld-private-website.wikidot.com/" target="_blank">私人实验室</a></strong>。有兴趣的话，要不来<strong><a href="http://timeline-bookstore.wikidot.com/" target="_blank">时间轴书店</a></strong>看看！</p>
+
+				</div>
+					
+							<div class="changes">
+					最后编辑于 <span class="odate time_1669266762 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">24 Nov 2022 05:12</span>
+					由 <span class="printuser"><a href="http://www.wikidot.com/user:info/lest-day" onclick="WIKIDOT.page.listeners.userInfo(7850356); return false;" >lest-day</a></span>
+					<a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.showHistory(event,5700295)"><i class="icon-plus"></i> 显示更多</a>
+				</div>
+				<div class="revisions" style="display: none"></div>
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,5700295)" class="btn btn-primary btn-small btn-sm">回复</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,5700295)" class="btn btn-default btn-small btn-sm">选项</a>
+							</div>
+									
+			<div id="post-options-5700295" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,5700295)" c>展开</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,5700295)">Re: 我也试试</a> 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/lest-day" onclick="WIKIDOT.page.listeners.userInfo(7850356); return false;"  ><img class="small" src="https://www.wikidot.com/avatar.php?userid=7850356&amp;amp;size=small&amp;amp;timestamp=1670674718" alt="lest-day" style="background-image:url(https://www.wikidot.com/userkarma.php?u=7850356)"/></a><a href="http://www.wikidot.com/user:info/lest-day" onclick="WIKIDOT.page.listeners.userInfo(7850356); return false;" >lest-day</a></span>, <span class="odate time_1667706279 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">06 Nov 2022 03:44</span>
+		</div>
+	</div>
+ 
+                
+        
+                      
+    <div class="post-container" id="fpc-5719440">
+                      
+		<div class="post" id="post-5719440">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,5719440)" class="btn btn-default btn-small btn-sm">折叠</a>
+					</div>
+								<div class="title" id="post-title-5719440">
+																		Re: 我也试试
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/helloosme" onclick="WIKIDOT.page.listeners.userInfo(8288810); return false;"  ><img class="small" src="https://www.wikidot.com/avatar.php?userid=8288810&amp;amp;size=small&amp;amp;timestamp=1670674718" alt="HelloOSMe" style="background-image:url(https://www.wikidot.com/userkarma.php?u=8288810)"/></a><a href="http://www.wikidot.com/user:info/helloosme" onclick="WIKIDOT.page.listeners.userInfo(8288810); return false;" >HelloOSMe</a></span> <span class="odate time_1668851510 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">19 Nov 2022 09:51</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-5719440">
+									
+
+<p>第一部分完成，暂时没有实现全站爬取。<br />
+爬虫备用请求头：<br />
+Mozilla/5.0 (iPad; CPU OS 16_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) EdgiOS/107.0.1418.36 Version/16.0 Mobile/15E148 Safari/604.1</p>
+
+							</div>
+
+										<div class="signature">
+					<hr class="signature-separator"/>
+					
+
+<div style="text-align: center;">
+<p><em><span style="color: grey">我们探索宇宙的唯一目的，是为了更好的探索自己。</span></em></p>
+</div>
+<br />
+<span style="color: grey">by Sir Arthur C. Clarke</span> 
+				</div>
+					
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,5719440)" class="btn btn-primary btn-small btn-sm">回复</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,5719440)" class="btn btn-default btn-small btn-sm">选项</a>
+							</div>
+									
+			<div id="post-options-5719440" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,5719440)" c>展开</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,5719440)">Re: 我也试试</a> 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/helloosme" onclick="WIKIDOT.page.listeners.userInfo(8288810); return false;"  ><img class="small" src="https://www.wikidot.com/avatar.php?userid=8288810&amp;amp;size=small&amp;amp;timestamp=1670674718" alt="HelloOSMe" style="background-image:url(https://www.wikidot.com/userkarma.php?u=8288810)"/></a><a href="http://www.wikidot.com/user:info/helloosme" onclick="WIKIDOT.page.listeners.userInfo(8288810); return false;" >HelloOSMe</a></span>, <span class="odate time_1668851510 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">19 Nov 2022 09:51</span>
+		</div>
+	</div>
+ 
+                
+        
+                      
+    <div class="post-container" id="fpc-5719481">
+                      
+		<div class="post" id="post-5719481">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,5719481)" class="btn btn-default btn-small btn-sm">折叠</a>
+					</div>
+								<div class="title" id="post-title-5719481">
+																		Re: 我也试试
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/lest-day" onclick="WIKIDOT.page.listeners.userInfo(7850356); return false;"  ><img class="small" src="https://www.wikidot.com/avatar.php?userid=7850356&amp;amp;size=small&amp;amp;timestamp=1670674718" alt="lest-day" style="background-image:url(https://www.wikidot.com/userkarma.php?u=7850356)"/></a><a href="http://www.wikidot.com/user:info/lest-day" onclick="WIKIDOT.page.listeners.userInfo(7850356); return false;" >lest-day</a></span> <span class="odate time_1668854732 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">19 Nov 2022 10:45</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-5719481">
+									
+
+<p>感谢贡献！</p>
+<blockquote>
+<p>暂时没有实现全站爬取</p>
+</blockquote>
+<p>建议在正式全站爬取前先限制速度，WD服务器很不稳定，为了不干扰别人的使用先手动限制速度。<br />
+稍后给出具体的限制。<br />
+实际上，爬取<a href="https://timeline-bookstore.wikidot.com/system:list-all-categories">https://timeline-bookstore.wikidot.com/system:list-all-categories</a>上所列出来的页面就足够恢复了，而且大多数站点也有这个页面。</p>
+<hr />
+<p>问一下，HelloOSMe会开发桌面应用吗？如果可以，我希望能够把这个东西图形化，以保证任何人都会使用。（开发成本和工作时间是又一个问题）（当然，先把v1.0搞定）</p>
+<hr />
+<p>另外是爬虫的网站的地图，在开始之前要分析网站，或者用户手动列出地图。</p>
+
+							</div>
+
+										<div class="signature">
+					<hr class="signature-separator"/>
+					
+
+<p><em>更新了的论坛签名档（</em><br />
+hi，欢迎前往我的<strong><a href="https://lest-day.github.io/" target="_blank">技术站</a></strong>和<strong><a href="http://ld-private-website.wikidot.com/" target="_blank">私人实验室</a></strong>。有兴趣的话，要不来<strong><a href="http://timeline-bookstore.wikidot.com/" target="_blank">时间轴书店</a></strong>看看！</p>
+
+				</div>
+					
+							<div class="changes">
+					最后编辑于 <span class="odate time_1668855109 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">19 Nov 2022 10:51</span>
+					由 <span class="printuser"><a href="http://www.wikidot.com/user:info/lest-day" onclick="WIKIDOT.page.listeners.userInfo(7850356); return false;" >lest-day</a></span>
+					<a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.showHistory(event,5719481)"><i class="icon-plus"></i> 显示更多</a>
+				</div>
+				<div class="revisions" style="display: none"></div>
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,5719481)" class="btn btn-primary btn-small btn-sm">回复</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,5719481)" class="btn btn-default btn-small btn-sm">选项</a>
+							</div>
+									
+			<div id="post-options-5719481" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,5719481)" c>展开</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,5719481)">Re: 我也试试</a> 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/lest-day" onclick="WIKIDOT.page.listeners.userInfo(7850356); return false;"  ><img class="small" src="https://www.wikidot.com/avatar.php?userid=7850356&amp;amp;size=small&amp;amp;timestamp=1670674718" alt="lest-day" style="background-image:url(https://www.wikidot.com/userkarma.php?u=7850356)"/></a><a href="http://www.wikidot.com/user:info/lest-day" onclick="WIKIDOT.page.listeners.userInfo(7850356); return false;" >lest-day</a></span>, <span class="odate time_1668854732 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">19 Nov 2022 10:45</span>
+		</div>
+	</div>
+ 
+                
+        
+            </div>
+ 
+            </div>
+ 
+            </div>
+ 
+            </div>
+ 
+
+	
+					
+      
+    <div class="post-container" id="fpc-5723734">
+                      
+		<div class="post" id="post-5723734">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,5723734)" class="btn btn-default btn-small btn-sm">折叠</a>
+					</div>
+								<div class="title" id="post-title-5723734">
+																		
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/lest-day" onclick="WIKIDOT.page.listeners.userInfo(7850356); return false;"  ><img class="small" src="https://www.wikidot.com/avatar.php?userid=7850356&amp;amp;size=small&amp;amp;timestamp=1670674718" alt="lest-day" style="background-image:url(https://www.wikidot.com/userkarma.php?u=7850356)"/></a><a href="http://www.wikidot.com/user:info/lest-day" onclick="WIKIDOT.page.listeners.userInfo(7850356); return false;" >lest-day</a></span> <span class="odate time_1669029218 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">21 Nov 2022 11:13</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-5723734">
+									
+
+<p>正式版完成了，准备发布到Github包里面了！<br />
+感谢各位的帮助！后续有更新请注意查看！（一般在更新至少2个内容才会发布Github包版本</p>
+
+							</div>
+
+										<div class="signature">
+					<hr class="signature-separator"/>
+					
+
+<p><em>更新了的论坛签名档（</em><br />
+hi，欢迎前往我的<strong><a href="https://lest-day.github.io/" target="_blank">技术站</a></strong>和<strong><a href="http://ld-private-website.wikidot.com/" target="_blank">私人实验室</a></strong>。有兴趣的话，要不来<strong><a href="http://timeline-bookstore.wikidot.com/" target="_blank">时间轴书店</a></strong>看看！</p>
+
+				</div>
+					
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,5723734)" class="btn btn-primary btn-small btn-sm">回复</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,5723734)" class="btn btn-default btn-small btn-sm">选项</a>
+							</div>
+									
+			<div id="post-options-5723734" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,5723734)" c>展开</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,5723734)"></a> 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/lest-day" onclick="WIKIDOT.page.listeners.userInfo(7850356); return false;"  ><img class="small" src="https://www.wikidot.com/avatar.php?userid=7850356&amp;amp;size=small&amp;amp;timestamp=1670674718" alt="lest-day" style="background-image:url(https://www.wikidot.com/userkarma.php?u=7850356)"/></a><a href="http://www.wikidot.com/user:info/lest-day" onclick="WIKIDOT.page.listeners.userInfo(7850356); return false;" >lest-day</a></span>, <span class="odate time_1669029218 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">21 Nov 2022 11:13</span>
+		</div>
+	</div>
+ 
+                
+        
+            </div>
+ 
+
+	
+					
+      
+    <div class="post-container" id="fpc-5728902">
+                      
+		<div class="post" id="post-5728902">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,5728902)" class="btn btn-default btn-small btn-sm">折叠</a>
+					</div>
+								<div class="title" id="post-title-5728902">
+																		建议（
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/lincarol" onclick="WIKIDOT.page.listeners.userInfo(6199448); return false;"  ><img class="small" src="https://www.wikidot.com/avatar.php?userid=6199448&amp;amp;size=small&amp;amp;timestamp=1670674718" alt="Lincarol" style="background-image:url(https://www.wikidot.com/userkarma.php?u=6199448)"/></a><a href="http://www.wikidot.com/user:info/lincarol" onclick="WIKIDOT.page.listeners.userInfo(6199448); return false;" >Lincarol</a></span> <span class="odate time_1669260633 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">24 Nov 2022 03:30</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-5728902">
+									
+
+<p>github在国内的访问速度&#8230;.懂得都懂</p>
+<p>可不可以把程序放在其他的网站上..?</p>
+
+							</div>
+
+										<div class="signature">
+					<hr class="signature-separator"/>
+					
+
+<div style="text-align: right;">
+<p><span style="font-size:70%;"><span style="color: #666666"><em>仰承皇命，分尸成仁。去世乏术，死志复发。</em></span></span></p>
+</div>
+
+				</div>
+					
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,5728902)" class="btn btn-primary btn-small btn-sm">回复</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,5728902)" class="btn btn-default btn-small btn-sm">选项</a>
+							</div>
+									
+			<div id="post-options-5728902" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,5728902)" c>展开</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,5728902)">建议（</a> 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/lincarol" onclick="WIKIDOT.page.listeners.userInfo(6199448); return false;"  ><img class="small" src="https://www.wikidot.com/avatar.php?userid=6199448&amp;amp;size=small&amp;amp;timestamp=1670674718" alt="Lincarol" style="background-image:url(https://www.wikidot.com/userkarma.php?u=6199448)"/></a><a href="http://www.wikidot.com/user:info/lincarol" onclick="WIKIDOT.page.listeners.userInfo(6199448); return false;" >Lincarol</a></span>, <span class="odate time_1669260633 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">24 Nov 2022 03:30</span>
+		</div>
+	</div>
+ 
+                
+        
+                      
+    <div class="post-container" id="fpc-5728906">
+                      
+		<div class="post" id="post-5728906">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,5728906)" class="btn btn-default btn-small btn-sm">折叠</a>
+					</div>
+								<div class="title" id="post-title-5728906">
+																		Re: 建议（
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/lest-day" onclick="WIKIDOT.page.listeners.userInfo(7850356); return false;"  ><img class="small" src="https://www.wikidot.com/avatar.php?userid=7850356&amp;amp;size=small&amp;amp;timestamp=1670674718" alt="lest-day" style="background-image:url(https://www.wikidot.com/userkarma.php?u=7850356)"/></a><a href="http://www.wikidot.com/user:info/lest-day" onclick="WIKIDOT.page.listeners.userInfo(7850356); return false;" >lest-day</a></span> <span class="odate time_1669260840 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">24 Nov 2022 03:34</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-5728906">
+									
+
+<p>我扔私站吧</p>
+<hr />
+<p>就下载程序放……应该内存不大awa</p>
+<hr />
+<p>OK，啦，点击<a href="http://ld-private-website.wikidot.com/local--files/pyc-instructions-for-use/Py-Crawler-1.0-Installer.exe">这里</a>下载。</p>
+<hr />
+<p>使用说明——<a href="http://ld-private-website.wikidot.com/pyc-instructions-for-use">http://ld-private-website.wikidot.com/pyc-instructions-for-use</a></p>
+
+							</div>
+
+										<div class="signature">
+					<hr class="signature-separator"/>
+					
+
+<p><em>更新了的论坛签名档（</em><br />
+hi，欢迎前往我的<strong><a href="https://lest-day.github.io/" target="_blank">技术站</a></strong>和<strong><a href="http://ld-private-website.wikidot.com/" target="_blank">私人实验室</a></strong>。有兴趣的话，要不来<strong><a href="http://timeline-bookstore.wikidot.com/" target="_blank">时间轴书店</a></strong>看看！</p>
+
+				</div>
+					
+							<div class="changes">
+					最后编辑于 <span class="odate time_1669266734 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">24 Nov 2022 05:12</span>
+					由 <span class="printuser"><a href="http://www.wikidot.com/user:info/lest-day" onclick="WIKIDOT.page.listeners.userInfo(7850356); return false;" >lest-day</a></span>
+					<a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.showHistory(event,5728906)"><i class="icon-plus"></i> 显示更多</a>
+				</div>
+				<div class="revisions" style="display: none"></div>
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,5728906)" class="btn btn-primary btn-small btn-sm">回复</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,5728906)" class="btn btn-default btn-small btn-sm">选项</a>
+							</div>
+									
+			<div id="post-options-5728906" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,5728906)" c>展开</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,5728906)">Re: 建议（</a> 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/lest-day" onclick="WIKIDOT.page.listeners.userInfo(7850356); return false;"  ><img class="small" src="https://www.wikidot.com/avatar.php?userid=7850356&amp;amp;size=small&amp;amp;timestamp=1670674718" alt="lest-day" style="background-image:url(https://www.wikidot.com/userkarma.php?u=7850356)"/></a><a href="http://www.wikidot.com/user:info/lest-day" onclick="WIKIDOT.page.listeners.userInfo(7850356); return false;" >lest-day</a></span>, <span class="odate time_1669260840 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">24 Nov 2022 03:34</span>
+		</div>
+	</div>
+ 
+                
+        
+                      
+    <div class="post-container" id="fpc-5728996">
+                      
+		<div class="post" id="post-5728996">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,5728996)" class="btn btn-default btn-small btn-sm">折叠</a>
+					</div>
+								<div class="title" id="post-title-5728996">
+																		Re: 建议（
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/lincarol" onclick="WIKIDOT.page.listeners.userInfo(6199448); return false;"  ><img class="small" src="https://www.wikidot.com/avatar.php?userid=6199448&amp;amp;size=small&amp;amp;timestamp=1670674718" alt="Lincarol" style="background-image:url(https://www.wikidot.com/userkarma.php?u=6199448)"/></a><a href="http://www.wikidot.com/user:info/lincarol" onclick="WIKIDOT.page.listeners.userInfo(6199448); return false;" >Lincarol</a></span> <span class="odate time_1669267331 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">24 Nov 2022 05:22</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-5728996">
+									
+
+<p>兴致勃勃点进去 一看exe 退出来.jpg</p>
+<p>看来得待会用公司电脑摸了（</p>
+
+							</div>
+
+										<div class="signature">
+					<hr class="signature-separator"/>
+					
+
+<div style="text-align: right;">
+<p><span style="font-size:70%;"><span style="color: #666666"><em>仰承皇命，分尸成仁。去世乏术，死志复发。</em></span></span></p>
+</div>
+
+				</div>
+					
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,5728996)" class="btn btn-primary btn-small btn-sm">回复</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,5728996)" class="btn btn-default btn-small btn-sm">选项</a>
+							</div>
+									
+			<div id="post-options-5728996" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,5728996)" c>展开</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,5728996)">Re: 建议（</a> 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/lincarol" onclick="WIKIDOT.page.listeners.userInfo(6199448); return false;"  ><img class="small" src="https://www.wikidot.com/avatar.php?userid=6199448&amp;amp;size=small&amp;amp;timestamp=1670674718" alt="Lincarol" style="background-image:url(https://www.wikidot.com/userkarma.php?u=6199448)"/></a><a href="http://www.wikidot.com/user:info/lincarol" onclick="WIKIDOT.page.listeners.userInfo(6199448); return false;" >Lincarol</a></span>, <span class="odate time_1669267331 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">24 Nov 2022 05:22</span>
+		</div>
+	</div>
+ 
+                
+        
+                      
+    <div class="post-container" id="fpc-5729059">
+                      
+		<div class="post" id="post-5729059">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,5729059)" class="btn btn-default btn-small btn-sm">折叠</a>
+					</div>
+								<div class="title" id="post-title-5729059">
+																		Re: 建议（
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/lest-day" onclick="WIKIDOT.page.listeners.userInfo(7850356); return false;"  ><img class="small" src="https://www.wikidot.com/avatar.php?userid=7850356&amp;amp;size=small&amp;amp;timestamp=1670674718" alt="lest-day" style="background-image:url(https://www.wikidot.com/userkarma.php?u=7850356)"/></a><a href="http://www.wikidot.com/user:info/lest-day" onclick="WIKIDOT.page.listeners.userInfo(7850356); return false;" >lest-day</a></span> <span class="odate time_1669272104 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">24 Nov 2022 06:41</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-5729059">
+									
+
+<p>awa.</p>
+
+							</div>
+
+										<div class="signature">
+					<hr class="signature-separator"/>
+					
+
+<p><em>更新了的论坛签名档（</em><br />
+hi，欢迎前往我的<strong><a href="https://lest-day.github.io/" target="_blank">技术站</a></strong>和<strong><a href="http://ld-private-website.wikidot.com/" target="_blank">私人实验室</a></strong>。有兴趣的话，要不来<strong><a href="http://timeline-bookstore.wikidot.com/" target="_blank">时间轴书店</a></strong>看看！</p>
+
+				</div>
+					
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,5729059)" class="btn btn-primary btn-small btn-sm">回复</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,5729059)" class="btn btn-default btn-small btn-sm">选项</a>
+							</div>
+									
+			<div id="post-options-5729059" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,5729059)" c>展开</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,5729059)">Re: 建议（</a> 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/lest-day" onclick="WIKIDOT.page.listeners.userInfo(7850356); return false;"  ><img class="small" src="https://www.wikidot.com/avatar.php?userid=7850356&amp;amp;size=small&amp;amp;timestamp=1670674718" alt="lest-day" style="background-image:url(https://www.wikidot.com/userkarma.php?u=7850356)"/></a><a href="http://www.wikidot.com/user:info/lest-day" onclick="WIKIDOT.page.listeners.userInfo(7850356); return false;" >lest-day</a></span>, <span class="odate time_1669272104 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">24 Nov 2022 06:41</span>
+		</div>
+	</div>
+ 
+                
+        
+            </div>
+ 
+                      
+    <div class="post-container" id="fpc-5754831">
+                      
+		<div class="post" id="post-5754831">
+		<div class="long">
+			<div class="head">
+									<div class="options">
+						<a href="javascript:;" onclick="togglePostFold(event,5754831)" class="btn btn-default btn-small btn-sm">折叠</a>
+					</div>
+								<div class="title" id="post-title-5754831">
+																		Re: 建议（
+															</div>
+				<div class="info">
+					<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/helloosme" onclick="WIKIDOT.page.listeners.userInfo(8288810); return false;"  ><img class="small" src="https://www.wikidot.com/avatar.php?userid=8288810&amp;amp;size=small&amp;amp;timestamp=1670674718" alt="HelloOSMe" style="background-image:url(https://www.wikidot.com/userkarma.php?u=8288810)"/></a><a href="http://www.wikidot.com/user:info/helloosme" onclick="WIKIDOT.page.listeners.userInfo(8288810); return false;" >HelloOSMe</a></span> <span class="odate time_1670589062 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">09 Dec 2022 12:31</span>
+														</div>
+			</div>
+			<div class="content" id="post-content-5754831">
+									
+
+<p>哈哈，安装程序</p>
+
+							</div>
+
+										<div class="signature">
+					<hr class="signature-separator"/>
+					
+
+<div style="text-align: center;">
+<p><em><span style="color: grey">我们探索宇宙的唯一目的，是为了更好的探索自己。</span></em></p>
+</div>
+<br />
+<span style="color: grey">by Sir Arthur C. Clarke</span> 
+				</div>
+					
+					
+						<div class="options">
+				
+													<strong><a href="javascript:;" onclick="postReply(event,5754831)" class="btn btn-primary btn-small btn-sm">回复</a></strong> 
+																	<a href="javascript:;" onclick="togglePostOptions(event,5754831)" class="btn btn-default btn-small btn-sm">选项</a>
+							</div>
+									
+			<div id="post-options-5754831" class="options" style="display: none">
+			</div>
+		</div>
+		<div class="short">
+							<a class="options btn btn-default btn-mini btn-xs" href="javascript:;" onclick="togglePostFold(event,5754831)" c>展开</a>
+						<a class="title" href="javascript:;" onclick="togglePostFold(event,5754831)">Re: 建议（</a> 由 <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/helloosme" onclick="WIKIDOT.page.listeners.userInfo(8288810); return false;"  ><img class="small" src="https://www.wikidot.com/avatar.php?userid=8288810&amp;amp;size=small&amp;amp;timestamp=1670674718" alt="HelloOSMe" style="background-image:url(https://www.wikidot.com/userkarma.php?u=8288810)"/></a><a href="http://www.wikidot.com/user:info/helloosme" onclick="WIKIDOT.page.listeners.userInfo(8288810); return false;" >HelloOSMe</a></span>, <span class="odate time_1670589062 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">09 Dec 2022 12:31</span>
+		</div>
+	</div>
+ 
+                
+        
+            </div>
+ 
+            </div>
+ 
+            </div>
+ 
+            </div>
+ 
+
+
+
+</div>
+
+        <a href="javascript:;" id="new-post-button" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.newPost(event,null)"
+      style="display:  block ; margin-bottom:1em"
+    >新回复</a>
+
+ 
+
+<div style="display:none" id="post-options-template">
+	<a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.showPermalink(event,'%POST_ID%')" class="btn btn-default btn-small btn-sm">永久链接</a>
+			<a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.editPost(event,'%POST_ID%')" class="btn btn-default btn-small btn-sm">编辑</a>
+			<a href="javascript:;" onclick="WIKIDOT.modules.ForumViewThreadModule.listeners.deletePost(event,'%POST_ID%')" class="btn btn-danger btn-small btn-sm">删除</a>
+</div>
+	
+			</div>
+	
+	
+	
+</div>
+                    </div>
+
+                    
+
+
+                    
+
+
+
+                    
+                        <div class="page-tags">
+                            <span>
+                                <a href="/system:page-tags/tag/_%E9%9A%90%E8%97%8F#pages">_隐藏</a>
+                            </span>
+                        </div>
+                    
+
+                    <div id="page-info-break"></div>
+                    
+                        <div id="page-options-container">
+                            
+                        </div>
+                    
+                    <div id="action-area" style="display: none;"></div>
+                </div>
+            </div>
+            
+            
+            
+            <div id="footer" style="display: block; visibility: visible;">
+                <div class="options" style="display: block; visibility: visible;">
+    <a href="http://www.wikidot.com/doc" id="wikidot-help-button">说明</a>
+    &nbsp;|
+    <a href="http://www.wikidot.com/legal:terms-of-service" id="wikidot-tos-button">服务条款</a>
+    &nbsp;|
+    <a href="http://www.wikidot.com/legal:privacy-policy" id="wikidot-privacy-button">隐私</a>
+    &nbsp;|
+    <a href="javascript:;" id="bug-report-button" onclick="WIKIDOT.page.listeners.pageBugReport(event)">报告错误</a>
+    &nbsp;|
+    <a href="javascript:;" id="abuse-report-button" onclick="WIKIDOT.page.listeners.flagPageObjectionable(event)">标记为令人反感的</a>
+</div>
+基于 <a href="http://www.wikidot.com">Wikidot.com</a> 
+            </div>
+            
+                <div id="license-area" class="license-area">
+                    除非特别注明,<br>本页内容依照<strong><a href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0协议</a></strong>授权<br><img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png" alt="Smiley face" width="100" height="35">
+                </div>
+            
+            
+            
+
+
+
+            <div id="extrac-div-1"><span></span></div><div id="extrac-div-2"><span></span></div><div id="extrac-div-3"><span></span></div>
+            
+            
+            
+            
+                
+            
+        </div>
+        
+    </div>
+<!-- These extra divs/spans may be used as catch-alls to add extra imagery. -->
+<div id="extra-div-1"><span></span></div><div id="extra-div-2"><span></span></div><div id="extra-div-3"><span></span></div>
+<div id="extra-div-4"><span></span></div><div id="extra-div-5"><span></span></div><div id="extra-div-6"><span></span></div>
+</div>
+
+
+
+
+</div>
+<div id="dummy-ondomready-block" style="display: none;" ></div>
+    <!-- Google Analytics load -->
+    <script type="text/javascript">
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    <!-- Quantcast -->
+    <script type="text/javascript">
+    _qoptions={
+        qacct:"p-edL3gsnUjJzw-"
+    };
+    (function() {
+        var qc = document.createElement('script'); qc.type = 'text/javascript'; qc.async = true;
+        qc.src = ('https:' == document.location.protocol ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(qc, s);
+    })();
+    </script>
+    <noscript>
+        <img src="http://pixel.quantserve.com/pixel/p-edL3gsnUjJzw-.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+    </noscript>
+
+
+
+
+<div id="page-options-bottom-tips" style="display: none;">
+    <div id="edit-button-hovertip">
+        请点此编辑本页内容。    </div>
+</div>
+<div id="page-options-bottom-2-tips"  style="display: none;">
+    <div id="edit-sections-button-hovertip">
+        单击此处切换页面各部分的编辑按钮（如果可能）。 在标题边会显示“编辑”链接。    </div>
+    <div id="edit-append-button-hovertip">
+        在不编辑整个页面源代码的情况下添加内容。    </div>
+    <div id="history-button-hovertip">
+        看看本页过去是如何沿革的。    </div>
+    <div id="discuss-button-hovertip">
+        若您想要讨论本页内容 - 这是最简单的方法。    </div>
+    <div id="files-button-hovertip">
+        检视并管理本页附件。    </div>
+    <div id="site-tools-button-hovertip">
+        管理网站的实用工具。    </div>
+    <div id="backlinks-button-hovertip">
+        检视链接至本页或引用本页的页面。    </div>
+    <div id="rename-move-button-hovertip">
+        变更页面名称（及 URL 地址，或许会影响分类）。    </div>
+    <div id="view-source-button-hovertip">
+        在不编辑的情形下检视维基源代码。    </div>
+    <div id="parent-page-button-hovertip">  
+        检视/ 设定父页面（用以建立浏览足迹与结构化​​配置）。    </div>
+            <div id="abuse-report-button-hovertip">
+            向管理员举报本页有令人反感的内容。        </div>
+        <div id="bug-report-button-hovertip">
+            事情不如预期？看看您可以做些什么。        </div>
+        <div id="wikidot-help-button-hovertip">
+            一般的 Wikidot.com 文件与说明。        </div>
+        <div id="wikidot-tos-button-hovertip">
+            Wikidot.com 服务条款 - 您可以做的事，您不该做的事之类的。        </div>
+        <div id="wikidot-privacy-button-hovertip">
+            Wikidot.com 隐私政策。          
+        </div>
+    </div>
+</body>
+</html>
